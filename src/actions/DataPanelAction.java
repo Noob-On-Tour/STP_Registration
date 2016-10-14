@@ -29,7 +29,7 @@ public class DataPanelAction {
     }
 
     public void saveButtonAction() {
-        setFileName(LIGHT_CSV);
+        setFileName(CREATED_CSV);
         saveToFile(dataRecords);
         JOptionPane.showMessageDialog(stpFrame, "Saved !", "Saved", JOptionPane.INFORMATION_MESSAGE);
     }

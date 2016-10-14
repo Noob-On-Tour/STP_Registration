@@ -204,7 +204,7 @@ public class Listener implements ActionListener {
 //    }
 //
 //    private void saveButtonAction() {
-//        setFileName(LIGHT_CSV);
+//        setFileName(CREATED_CSV);
 //        saveToFile(dataRecords);
 //        JOptionPane.showMessageDialog(stpFrame, "Saved !", "Saved", JOptionPane.INFORMATION_MESSAGE);
 //    }
@@ -213,7 +213,7 @@ public class Listener implements ActionListener {
 //        setFileName(ATTENDEES_CSV);
 //        saveToFile(attendeesRecords);
 //        JOptionPane.showMessageDialog(stpFrame, "File Created !", "", JOptionPane.INFORMATION_MESSAGE);
-//        setFileName(LIGHT_CSV);
+//        setFileName(CREATED_CSV);
 //    }
 //
 //    private void clearSearchPanel() {

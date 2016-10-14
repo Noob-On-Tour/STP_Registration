@@ -3,7 +3,7 @@ package actions;
 import javax.swing.*;
 
 import static controller.Main.ATTENDEES_CSV;
-import static controller.Main.LIGHT_CSV;
+import static controller.Main.CREATED_CSV;
 import static controller.Main.attendeesRecords;
 import static model.Operations.saveToFile;
 import static model.Operations.setFileName;
@@ -18,7 +18,7 @@ public class StatisticsPanelAction {
         setFileName(ATTENDEES_CSV);
         saveToFile(attendeesRecords);
         JOptionPane.showMessageDialog(stpFrame, "File Created !", "", JOptionPane.INFORMATION_MESSAGE);
-        setFileName(LIGHT_CSV);
+        setFileName(CREATED_CSV);
     }
 
 }

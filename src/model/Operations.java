@@ -48,6 +48,22 @@ public class Operations {
         }
     }
 
+    public static void countUnique() {
+        int uniqueCount = 0;
+        ArrayList<String> uniqueRecords = new ArrayList<>();
+        for (int i = dataRecords.size() - 1; i > -1; i--) {
+            Record toComp = dataRecords.get(i);
+            if (uniqueRecords.isEmpty()) uniqueRecords.add(toComp.getEmail());
+            else {
+                if (!uniqueRecords.contains(toComp.getEmail())) {
+                    uniqueRecords.add(toComp.getEmail());
+                    uniqueCount++;
+                }
+            }
+        }
+        System.out.println(uniqueCount);
+    }
+
     public static ArrayList<Record> loadFromFile() {
         dataRecords = null;
         try {

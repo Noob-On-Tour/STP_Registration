@@ -16,18 +16,17 @@ import static controller.Controller.setUIFlavour;
 public class Main {
     public static ArrayList<Record> dataRecords = new ArrayList<>();
     public static final ArrayList<Record> attendeesRecords = new ArrayList<>();
-    public static final String LIGHT_CSV = "Light.csv";
-    public static final String ATTENDEES_CSV = "Attendees.csv";
-    private static final String NAWART_16_RESPONSES_FORM_RESPONSES_1_CSV = "NAWART '16 (Responses) - Form Responses 1.csv";
+    public static final String CREATED_CSV = "created.csv";
+    public static final String ATTENDEES_CSV = "attendees.csv";
+    private static final String SOURCE_CSV = "source.csv";
 
     public static void main(String[] args) {
-        if (new File(LIGHT_CSV).isFile()) Operations.setFileName(LIGHT_CSV);
-        else if (new File(NAWART_16_RESPONSES_FORM_RESPONSES_1_CSV).isFile())
-            new FixFile(NAWART_16_RESPONSES_FORM_RESPONSES_1_CSV, LIGHT_CSV);
-
-        Operations.setFileName(LIGHT_CSV);
+        if (new File(CREATED_CSV).isFile()) Operations.setFileName(CREATED_CSV);
+        else if (new File(SOURCE_CSV).isFile())
+            new FixFile(SOURCE_CSV, CREATED_CSV);
+        Operations.setFileName(CREATED_CSV);
         setUIFlavour();
         new Controller();
+        Operations.countUnique();
     }
-
 }

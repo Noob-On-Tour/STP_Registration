@@ -179,7 +179,7 @@
                   <enabled value="true"/>
                   <font size="18"/>
                   <icon value="Icons/search.jpg"/>
-                  <text value="Search"/>
+                  <text value="&amp;Search"/>
                 </properties>
               </component>
               <component id="aa298" class="javax.swing.JSeparator">
