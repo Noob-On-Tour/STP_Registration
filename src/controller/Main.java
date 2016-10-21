@@ -13,6 +13,7 @@ import static controller.Controller.setUIFlavour;
  * Created by Ahmed on 08-Aug-16.
  */
 
+
 public class Main {
     public static ArrayList<Record> dataRecords = new ArrayList<>();
     public static final ArrayList<Record> attendeesRecords = new ArrayList<>();
