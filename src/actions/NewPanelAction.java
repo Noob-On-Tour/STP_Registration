@@ -27,7 +27,8 @@ public class NewPanelAction {
         boolean state = false;
         if (validate.Name(name) && validate.Email(email) && validate.Phone(phone)) {
             if (JOptionPane.showConfirmDialog(stpFrame, "Add New Record ?", "Confirmation", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE) == 0) {
-                dataRecords.add(new Record(name, email, phone, Integer.toString(dataRecords.size() + 1), "1"));
+                // Fixed a bug for adding new New Entry Attendance was set to "1" instead of "true".
+                dataRecords.add(new Record(name, email, phone, Integer.toString(dataRecords.size() + 1), "true"));
                 JOptionPane.showMessageDialog(stpFrame, "New Entry ID : " + dataRecords.size(), "ID", JOptionPane.INFORMATION_MESSAGE);
                 state = true;
             }
