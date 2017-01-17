@@ -24,6 +24,7 @@ public class SearchPanelAction {
     }
 
     public boolean confirmButtonAction() {
+
         if (searchResult != null) {
             String id = stpFrame.idSearchResult.getText();
             String attendance = Boolean.toString(stpFrame.attendedRadioButton.isSelected());
