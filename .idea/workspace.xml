@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4efce21f-dab9-4732-8fe6-cfc8e7dd71a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Icons/select.png" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/STP_jar.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
@@ -10,13 +9,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/STP.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/DataPanelAction.java" afterPath="$PROJECT_DIR$/src/actions/DataPanelAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Listener.java" afterPath="$PROJECT_DIR$/src/view/Listener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MyFrame.form" afterPath="$PROJECT_DIR$/src/view/MyFrame.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MyFrame.java" afterPath="$PROJECT_DIR$/src/view/MyFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,6 +67,10 @@
               <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1502136866565" expanded="true" signature="423:730" ph="{...}" />
+                <marker date="1502136866565" expanded="true" signature="767:943" ph="{...}" />
+                <marker date="1502136866565" expanded="true" signature="994:1092" ph="{...}" />
+                <marker date="1502136866565" expanded="true" signature="1141:1212" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -423,6 +419,10 @@
           <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1502136866565" expanded="true" signature="423:730" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="767:943" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="994:1092" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="1141:1212" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -486,6 +486,10 @@
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1502136866565" expanded="true" signature="423:730" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="767:943" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="994:1092" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="1141:1212" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -575,6 +579,10 @@
           <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1502136866565" expanded="true" signature="423:730" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="767:943" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="994:1092" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="1141:1212" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -717,6 +725,10 @@
           <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1502136866565" expanded="true" signature="423:730" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="767:943" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="994:1092" ph="{...}" />
+            <marker date="1502136866565" expanded="true" signature="1141:1212" ph="{...}" />
           </folding>
         </state>
       </provider>
