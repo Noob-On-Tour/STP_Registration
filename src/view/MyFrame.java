@@ -34,6 +34,8 @@ public class MyFrame extends JPanel {
     public JScrollPane attendeesScrollPane;
     public JTable attendeesTable;
     public JButton deleteButton;
+    public JButton selectFileButton;
+
 
     private MyFrame() {
     }
@@ -43,5 +45,4 @@ public class MyFrame extends JPanel {
     public static MyFrame getInstance() {
         return stpFrame;
     }
-
 }
