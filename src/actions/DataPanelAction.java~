@@ -17,7 +17,7 @@ public class DataPanelAction {
         updateDataTable();
     }
 
-    public void exitButtonAction()  {
+    public void exitButtonAction() {
         int toSave;
         if (saveFlag) {
             toSave = JOptionPane.showConfirmDialog(stpFrame, "Unsaved work !\n" +

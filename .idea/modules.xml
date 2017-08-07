@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/STP.iml" filepath="$PROJECT_DIR$/STP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/STP_Registration.iml" filepath="$PROJECT_DIR$/STP_Registration.iml" />
     </modules>
   </component>
 </project>
