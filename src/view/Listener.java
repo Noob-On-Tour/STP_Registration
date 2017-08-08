@@ -7,7 +7,6 @@ import model.Validate;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 
 import static controller.Controller.updateDataTable;
 
@@ -15,10 +14,11 @@ import static controller.Controller.updateDataTable;
  * Created by Ahmed on 13-Aug-16.
  */
 public class Listener implements ActionListener {
-    private final MyFrame stpFrame;
     public static Record searchResult;
     public static boolean saveFlag = false;
-    public String currentDir =null;
+    private final MyFrame stpFrame;
+    public String currentDir = null;
+
     public Listener(MyFrame stp_frame) {
         this.stpFrame = stp_frame;
         addActionListener();
@@ -61,9 +61,9 @@ public class Listener implements ActionListener {
         else if (source == stpFrame.searchButton) {
             searchPanelAction.searchButtonAction(validate);
         } else if (source == stpFrame.confirmButton) {
-            if(stpFrame.attendedRadioButton.isSelected())
+            if (stpFrame.attendedRadioButton.isSelected())
                 isChanged = searchPanelAction.confirmButtonAction();
-            else{
+            else {
                 JOptionPane.showMessageDialog(null, "You have to click attend first", "Error", JOptionPane.INFORMATION_MESSAGE);
             }
         } else if (source == stpFrame.editButton) {
@@ -74,9 +74,9 @@ public class Listener implements ActionListener {
 
         //Data Panel
         else if (source == stpFrame.saveButton) {
-            String writeFile = JOptionPane.showInputDialog(null,"Please enter the file name","");
+            String writeFile = JOptionPane.showInputDialog(null, "Please enter the file name", "");
             dataPanelAction.saveButtonAction();
-            dataPanelAction.saveFileAction(currentDir+"/"+writeFile+".csv");
+            dataPanelAction.saveFileAction(currentDir + "/" + writeFile + ".csv");
             saveFlag = false;
         } else if (source == stpFrame.updateTableButton) {
             dataPanelAction.updateTableButtonAction();
@@ -87,9 +87,9 @@ public class Listener implements ActionListener {
             int result = fileChooser.showOpenDialog(stpFrame);
             if (result == JFileChooser.APPROVE_OPTION) {
                 String selectedFileName = fileChooser.getSelectedFile().getAbsolutePath();
-                currentDir=fileChooser.getSelectedFile().getParentFile().getAbsolutePath();
+                currentDir = fileChooser.getSelectedFile().getParentFile().getAbsolutePath();
                 System.out.println(selectedFileName);
-                dataPanelAction.selectFileAction( selectedFileName);
+                dataPanelAction.selectFileAction(selectedFileName);
             }
         }
 
