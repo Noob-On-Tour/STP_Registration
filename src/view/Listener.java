@@ -4,6 +4,7 @@ import actions.*;
 import model.Record;
 import model.Validate;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,9 +14,10 @@ import static controller.Controller.updateDataTable;
  * Created by Ahmed on 13-Aug-16.
  */
 public class Listener implements ActionListener {
-    private final MyFrame stpFrame;
     public static Record searchResult;
     public static boolean saveFlag = false;
+    private final MyFrame stpFrame;
+    public String currentDir = null;
 
     public Listener(MyFrame stp_frame) {
         this.stpFrame = stp_frame;
@@ -33,6 +35,7 @@ public class Listener implements ActionListener {
         stpFrame.editButton.addActionListener(this);
         stpFrame.createAttendeesFileButton.addActionListener(this);
         stpFrame.deleteButton.addActionListener(this);
+        stpFrame.selectFileButton.addActionListener(this);
     }
 
     @Override
@@ -58,7 +61,11 @@ public class Listener implements ActionListener {
         else if (source == stpFrame.searchButton) {
             searchPanelAction.searchButtonAction(validate);
         } else if (source == stpFrame.confirmButton) {
-            isChanged = searchPanelAction.confirmButtonAction();
+            if (stpFrame.attendedRadioButton.isSelected())
+                isChanged = searchPanelAction.confirmButtonAction();
+            else {
+                JOptionPane.showMessageDialog(null, "You have to click attend first", "Error", JOptionPane.INFORMATION_MESSAGE);
+            }
         } else if (source == stpFrame.editButton) {
             isChanged = searchPanelAction.editButtonAction();
         } else if (source == stpFrame.deleteButton) {
@@ -67,12 +74,23 @@ public class Listener implements ActionListener {
 
         //Data Panel
         else if (source == stpFrame.saveButton) {
+            String writeFile = JOptionPane.showInputDialog(null, "Please enter the file name", "");
             dataPanelAction.saveButtonAction();
+            dataPanelAction.saveFileAction(currentDir + "/" + writeFile + ".csv");
             saveFlag = false;
         } else if (source == stpFrame.updateTableButton) {
             dataPanelAction.updateTableButtonAction();
         } else if (source == stpFrame.EXITButton) {
             dataPanelAction.exitButtonAction();
+        } else if (source == stpFrame.selectFileButton) {
+            JFileChooser fileChooser = new JFileChooser();
+            int result = fileChooser.showOpenDialog(stpFrame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                String selectedFileName = fileChooser.getSelectedFile().getAbsolutePath();
+                currentDir = fileChooser.getSelectedFile().getParentFile().getAbsolutePath();
+                System.out.println(selectedFileName);
+                dataPanelAction.selectFileAction(selectedFileName);
+            }
         }
 
         //StatisticsPanelAction panel
