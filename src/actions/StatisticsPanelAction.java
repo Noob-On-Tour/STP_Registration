@@ -20,5 +20,10 @@ public class StatisticsPanelAction {
         JOptionPane.showMessageDialog(stpFrame, "File Created !", "", JOptionPane.INFORMATION_MESSAGE);
         setFileName(CREATED_CSV);
     }
-
+    public void createSelectedAttendeesFileButtonAction(String selectedFileName)
+    {
+        setFileName(selectedFileName);
+        saveToFile(attendeesRecords);
+        setFileName(CREATED_CSV);
+    }
 }
