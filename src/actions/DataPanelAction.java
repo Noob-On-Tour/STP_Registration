@@ -3,7 +3,8 @@ package actions;
 import javax.swing.*;
 
 import static controller.Controller.updateDataTable;
-import static controller.Main.*;
+import static controller.Main.CREATED_CSV;
+import static controller.Main.dataRecords;
 import static model.Operations.*;
 import static view.Listener.saveFlag;
 import static view.MyFrame.stpFrame;
@@ -17,7 +18,7 @@ public class DataPanelAction {
         updateDataTable();
     }
 
-    public void exitButtonAction()  {
+    public void exitButtonAction() {
         int toSave;
         if (saveFlag) {
             toSave = JOptionPane.showConfirmDialog(stpFrame, "Unsaved work !\n" +
@@ -32,14 +33,17 @@ public class DataPanelAction {
         saveToFile(dataRecords);
         JOptionPane.showMessageDialog(stpFrame, "Saved !", "Saved", JOptionPane.INFORMATION_MESSAGE);
     }
-    public void selectFileAction(String FileName) {
-        setFileName(FileName);
+
+    public void selectFileButtonAction(String fileName) {
+        setFileName(fileName);
         loadFromFile();
         updateTableButtonAction();
 
     }
-    public void saveFileAction(String FileName) {
-        setFileName(FileName);
+
+    public void saveFileAction(String fileName) {
+        setFileName(fileName);
         saveToFile(dataRecords);
     }
+
 }

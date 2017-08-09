@@ -1,6 +1,7 @@
 package view;
 
 import actions.*;
+import model.FixFile;
 import model.Record;
 import model.Validate;
 
@@ -18,6 +19,9 @@ public class Listener implements ActionListener {
     public static boolean saveFlag = false;
     private final MyFrame stpFrame;
     public String currentDir = null;
+    public String selectedFile = null;
+    public String selectedFileAfterFix = null;
+    public FixFile loadFile;
 
     public Listener(MyFrame stp_frame) {
         this.stpFrame = stp_frame;
@@ -75,7 +79,6 @@ public class Listener implements ActionListener {
         //Data Panel
         else if (source == stpFrame.saveButton) {
             String writeFile = JOptionPane.showInputDialog(null, "Please enter the file name", "");
-            dataPanelAction.saveButtonAction();
             dataPanelAction.saveFileAction(currentDir + "/" + writeFile + ".csv");
             saveFlag = false;
         } else if (source == stpFrame.updateTableButton) {
@@ -86,16 +89,18 @@ public class Listener implements ActionListener {
             JFileChooser fileChooser = new JFileChooser();
             int result = fileChooser.showOpenDialog(stpFrame);
             if (result == JFileChooser.APPROVE_OPTION) {
-                String selectedFileName = fileChooser.getSelectedFile().getAbsolutePath();
+                selectedFile = fileChooser.getSelectedFile().getAbsolutePath();
                 currentDir = fileChooser.getSelectedFile().getParentFile().getAbsolutePath();
-                System.out.println(selectedFileName);
-                dataPanelAction.selectFileAction(selectedFileName);
+                 selectedFileAfterFix = currentDir + "/created.csv";
+                 loadFile = new FixFile(selectedFile, selectedFileAfterFix);
+                dataPanelAction.selectFileButtonAction(selectedFileAfterFix);
             }
         }
 
         //StatisticsPanelAction panel
         else if (source == stpFrame.createAttendeesFileButton) {
             statisticsPanelAction.createAttendeesFileButtonAction();
+            statisticsPanelAction.createSelectedAttendeesFileButtonAction(currentDir + "/Attendees.csv");
         }
 
         if (isChanged) {
