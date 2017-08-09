@@ -2,9 +2,7 @@ package actions;
 
 import javax.swing.*;
 
-import static controller.Main.ATTENDEES_CSV;
-import static controller.Main.CREATED_CSV;
-import static controller.Main.attendeesRecords;
+import static controller.Main.*;
 import static model.Operations.saveToFile;
 import static model.Operations.setFileName;
 import static view.MyFrame.stpFrame;
@@ -20,8 +18,8 @@ public class StatisticsPanelAction {
         JOptionPane.showMessageDialog(stpFrame, "File Created !", "", JOptionPane.INFORMATION_MESSAGE);
         setFileName(CREATED_CSV);
     }
-    public void createSelectedAttendeesFileButtonAction(String selectedFileName)
-    {
+
+    public void createSelectedAttendeesFileButtonAction(String selectedFileName) {
         setFileName(selectedFileName);
         saveToFile(attendeesRecords);
         setFileName(CREATED_CSV);

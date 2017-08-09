@@ -20,7 +20,6 @@ public class Listener implements ActionListener {
     private final MyFrame stpFrame;
     public String currentDir = null;
     public String selectedFile = null;
-    public String selectedFileAfterFix = null;
     public FixFile loadFile;
 
     public Listener(MyFrame stp_frame) {
@@ -91,9 +90,8 @@ public class Listener implements ActionListener {
             if (result == JFileChooser.APPROVE_OPTION) {
                 selectedFile = fileChooser.getSelectedFile().getAbsolutePath();
                 currentDir = fileChooser.getSelectedFile().getParentFile().getAbsolutePath();
-                 selectedFileAfterFix = currentDir + "/created.csv";
-                 loadFile = new FixFile(selectedFile, selectedFileAfterFix);
-                dataPanelAction.selectFileButtonAction(selectedFileAfterFix);
+                loadFile = new FixFile(selectedFile, currentDir + "/created.csv");
+                dataPanelAction.selectFileButtonAction(currentDir + "/created.csv");
             }
         }
 
